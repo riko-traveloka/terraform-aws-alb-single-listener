@@ -55,6 +55,7 @@ resource "aws_lb_target_group" "default" {
   vpc_id               = "${var.vpc_id}"
   deregistration_delay = "${var.tg_deregistration_delay}"
   target_type          = "${var.tg_target_type}"
+  slow_start           = "${var.tg_slow_start}"
 
   health_check = ["${local.tg_health_check}"]
 
